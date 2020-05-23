@@ -16,7 +16,7 @@ public class User {
 	private String username;
     private String password;
     private int phonenumber;
-    private String emailid;
+    private String emailId;
     private String role;
     private String confirmpassword;
     
@@ -41,10 +41,10 @@ public class User {
     {
     	return username;
     }
-    
+        
     public void setPassword(String password) {
     	this.password=password;
-    }
+    } 
     @Column(name="password")
     public String getPassword() {
     	return password;
@@ -66,13 +66,13 @@ public class User {
     {
     	return phonenumber;
     }
-    public void setEmailid(String emailid)
+    public void setEmailid(String emailId)
     {
-    	this.emailid=emailid;
+    	this.emailId=emailId;
     }
     @Column(name="emailid")
     public String getEmailid() {
-    	return emailid;
+    	return emailId;
     }
     public void setRole(String role) {
     	this.role=role;
@@ -85,11 +85,11 @@ public class User {
     public User() {
     }
  
-    public User(Integer userId, String username, String password, String emailid, String role, int phonenumber ) {
+    public User(Integer userId, String username, String password, String emailId, String role, int phonenumber ) {
         this.userId = userId;
         this.username = username;
         this.password = password;
-        this.emailid=emailid;
+        this.emailId=emailId;
         this.role=role;
         this.phonenumber=phonenumber;
     }
