@@ -31,12 +31,11 @@ class DemoApplicationTests {
 	public void saveuserTest() {
 		
 		User user=new User(1,"ANU","SRI", "SR", "AA", 121212);
-	
-	// when(repo.save(user)).thenReturn(user);
-	 when(user.getPhonenumber()>25).thenReturn(false);
+	    when(repo.save(user)).thenReturn(user);
+	// when(user.getPhonenumber()>25).thenReturn(false);
 	// System.out.println("model"+user); 
 	//System.out.println("service"+UserService.save(user)); 
-	 assertEquals(false,user.getPhonenumber()>25);
+	 assertEquals(user,UserService.save(user));
 	// verify(UserService).save(user);
 	 //controller validations
 	 //

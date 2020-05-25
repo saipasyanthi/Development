@@ -21,31 +21,12 @@ public class UserDetailServiceImpl {
 	  
 	  public User save(User user) {
 		  
-		 
-	
-				if (user.getPhonenumber()<25)
-				{
-					 System.out.println("young");
-					
-				}
-				if (user.getPhonenumber()>25 && user.getPhonenumber()<50)
-				{
-					 System.out.println("middle");
-				}
-				
-				if (user.getPhonenumber()>50)
-				{
-					 System.out.println("old");
-				}
-				
-				  return userDao.save(user);
-			
+		return userDao.save(user);			
 	  
 	  }
-	  public Optional<User> getUserById(Long id) 
-	  { 
-		  return 	 userDao.findById(id);
-	  }
+		/*
+		 * public Optional<User> getUserById(Long id) { return userDao.findById(id); }
+		 */
 	  
 
 

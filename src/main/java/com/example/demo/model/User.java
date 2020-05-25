@@ -18,7 +18,7 @@ public class User {
     private int phonenumber;
     private String emailId;
     private String role;
-    private String confirmpassword;
+   // private String confirmpassword;
     
     
     @Id
@@ -49,15 +49,7 @@ public class User {
     public String getPassword() {
     	return password;
     }
-    
-    public void setconfirmpassword(String confirmpassword) {
-    	this.confirmpassword=confirmpassword;
-    }
-    @Column(name="password")
-    public String getconfirmpassword() {
-    	return confirmpassword;
-    }
-    
+       
     public void setPhonenumber(int phonenumber) {
     	this.phonenumber=phonenumber;
     }

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,7 +35,7 @@ import com.example.demo.service.UserDetailServiceImpl;
 @RestController
 @RequestMapping("/health")
 @Validated
-
+@CrossOrigin
 public class userController {
 
 	@Autowired
@@ -52,12 +53,10 @@ public class userController {
 	  {
 		   userService.save(user);
 	  }
-	  @GetMapping("/login/{id}") 
-	  public Optional<User> getUserById(@PathVariable Long id ) 
-	  { 
-		  return 	 userService.getUserById(id);
-	  }
-	  
+		/*
+		 * @GetMapping("/login/{id}") public Optional<User> getUserById(@PathVariable
+		 * Long id ) { return userService.getUserById(id); }
+		 */
 		/*
 		 * @GetMapping("/user/{id}") User getEmployeeById(@PathVariable
 		 * 
