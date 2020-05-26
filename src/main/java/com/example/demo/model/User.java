@@ -9,16 +9,18 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "emp")
 public class User {
 	
 	private Integer userId;
 	private String username;
     private String password;
-    private int phonenumber;
-    private String emailId;
+    private Double phoneno;
+    private String email;
     private String role;
-   // private String confirmpassword;
+    private String newpassword;
+    private String confirmpassword;
+    
     
     
     @Id
@@ -49,22 +51,38 @@ public class User {
     public String getPassword() {
     	return password;
     }
+    public void setnewpassword(String newpassword) {
+    	this.newpassword=newpassword;
+    } 
+    @Column(name="newpassword")
+    public String getnewpassword() {
+    	return newpassword;
+    }
+      
+    public void setconfirmpassword(String confirmpassword) {
+    	this.confirmpassword=confirmpassword;
+    } 
+    @Column(name="confirmpassword")
+    public String getconfirmpassword() {
+    	return confirmpassword;
+    }
+      
        
-    public void setPhonenumber(int phonenumber) {
-    	this.phonenumber=phonenumber;
+    public void setphoneno(Double phoneno) {
+    	this.phoneno=phoneno;
     }
-    @Column(name="phonenumber")
-    public int getPhonenumber()
+    @Column(name="phoneno")
+    public Double getphoneno()
     {
-    	return phonenumber;
+    	return phoneno;
     }
-    public void setEmailid(String emailId)
+    public void setEmailid(String email)
     {
-    	this.emailId=emailId;
+    	this.email=email;
     }
-    @Column(name="emailid")
+    @Column(name="email")
     public String getEmailid() {
-    	return emailId;
+    	return email;
     }
     public void setRole(String role) {
     	this.role=role;
@@ -77,13 +95,15 @@ public class User {
     public User() {
     }
  
-    public User(Integer userId, String username, String password, String emailId, String role, int phonenumber ) {
+    public User(Integer userId, String username, String password,String newpassword,String confirmpassword, String email, String role, Double phoneno ) {
         this.userId = userId;
         this.username = username;
         this.password = password;
-        this.emailId=emailId;
+        this.email=email;
         this.role=role;
-        this.phonenumber=phonenumber;
+        this.phoneno=phoneno;
+        this.confirmpassword= confirmpassword;
+        this.newpassword=newpassword;
     }
 
 }

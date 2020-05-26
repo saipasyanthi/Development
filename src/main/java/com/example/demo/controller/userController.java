@@ -51,7 +51,9 @@ public class userController {
 	  @PostMapping("/createUser") 
 	  public void add(@RequestBody User user)
 	  {
+		  
 		   userService.save(user);
+		   
 	  }
 		/*
 		 * @GetMapping("/login/{id}") public Optional<User> getUserById(@PathVariable

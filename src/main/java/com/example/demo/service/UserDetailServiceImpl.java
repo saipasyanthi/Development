@@ -20,7 +20,9 @@ public class UserDetailServiceImpl {
 	  public List<User> listAll() { return userDao.findAll(); }
 	  
 	  public User save(User user) {
-		  
+		  if(user.getnewpassword().contentEquals(user.getconfirmpassword())) {
+			  user.setPassword(user.getnewpassword());
+		  }
 		return userDao.save(user);			
 	  
 	  }

@@ -30,7 +30,7 @@ class DemoApplicationTests {
 	@Test
 	public void saveuserTest() {
 		
-		User user=new User(1,"ANU","SRI", "SR", "AA", 121212);
+		User user=new User(1,"ANU","SRI", "SR", "AA", "Sri", "Sri", (double) 121212);
 	    when(repo.save(user)).thenReturn(user);
 	// when(user.getPhonenumber()>25).thenReturn(false);
 	// System.out.println("model"+user); 
